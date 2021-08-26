@@ -5,6 +5,7 @@ pipeline {
         stage('build') {
             steps {
                 sh ''' #!/bin/bash
+                    echo 'Start'
                     PATH=$WORKSPACE/venv/bin:/usr/local/bin:$PATH
                     if [ ! -d "venv" ]; then
                         virtualenv venv
