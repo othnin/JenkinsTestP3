@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh ''' #!/bin/bash
+                sh ''' 
+                    #!/bin/bash
                     echo $PWD
                     PATH=$WORKSPACE/venv/bin:/usr/local/bin:$PATH
                     if [ ! -d "venv" ]; then
