@@ -7,7 +7,7 @@ pipeline {
                 sh ''' 
                     #!/bin/bash
                     echo $PWD
-                    PATH=$WORKSPACE/venv/bin:/usr/local/bin:$PATH
+                    PATH=$WORKSPACE/venv/bin:/usr/bin:$PATH
                     if [ ! -d "venv" ]; then
                         virtualenv venv
                     fi
